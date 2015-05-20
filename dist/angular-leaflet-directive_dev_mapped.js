@@ -1,5 +1,5 @@
 /*!
-*  angular-leaflet-directive 0.8.1 2015-05-13
+*  angular-leaflet-directive 0.8.1 2015-05-20
 *  angular-leaflet-directive - An AngularJS directive to easily interact with Leaflet maps
 *  git: https://github.com/tombatossals/angular-leaflet-directive
 */
@@ -1182,6 +1182,10 @@ angular.module("leaflet-directive")
         utfgrid.on('click', function(e) {
             $rootScope.$broadcast('leafletDirectiveMap.utfgridClick', e);
         });
+        
+        utfgrid.on('mousemove', function(e) {
+            $rootScope.$broadcast('leafletDirectiveMap.utfgridMousemove', e);
+        });        
 
         return utfgrid;
     };
@@ -4503,7 +4507,12 @@ angular.module("leaflet-directive")
         'move',
         'remove',
         'popupopen',
-        'popupclose'
+        'popupclose',
+        'touchend',
+        'touchstart',
+        'touchmove',
+        'touchcancel',
+        'touchleave'
         ];
     };
 
