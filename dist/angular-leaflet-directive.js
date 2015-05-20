@@ -4503,7 +4503,12 @@ angular.module("leaflet-directive")
         'move',
         'remove',
         'popupopen',
-        'popupclose'
+        'popupclose',
+        'touchend',
+        'touchstart',
+        'touchmove',
+        'touchcancel',
+        'touchleave'
         ];
     };
 
